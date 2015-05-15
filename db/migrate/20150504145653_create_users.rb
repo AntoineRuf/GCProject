@@ -7,7 +7,6 @@ class CreateUsers < ActiveRecord::Migration
       t.string :email
       t.string :tel
       t.boolean :is_admin
-      t.string :password
 
       t.timestamps null: false
     end
