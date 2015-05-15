@@ -1,0 +1,47 @@
+%link{rel: "stylesheet", type: "text/css", href: "/css/bootstrap.css"}
+%html
+  %body
+    %header
+      %nav.navbar.navbar-default
+        .container
+          .navbar-header
+            %button.navbar-toggle.collapsed{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", :type => "button"}
+              %span.sr-only Toggle navigation
+              %span.icon-bar
+              %span.icon-bar
+              %span.icon-bar
+            %a.navbar-brand{:href => "#"} Good Corner Project
+          .navbar-collapse.collapse
+            %ul.nav.navbar-nav
+              %li.active
+                %a Annonces
+              %li
+                %a{:href => 'users#index'} Users
+
+%h1 Listing annonces
+
+%table
+  %thead
+    %tr
+      %th Title
+      %th Body
+      %th Price
+      %th Creator
+      %th
+      %th
+      %th
+
+  %tbody
+    - @annonces.each do |annonce|
+      %tr
+        %td= annonce.title
+        %td= annonce.body
+        %td= (annonce.price/100.0)
+        %td= annonce.creator_id
+        %td= link_to 'Show', annonce
+        %td= link_to 'Edit', edit_annonce_path(annonce)
+        %td= link_to 'Destroy', annonce, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Annonce', new_annonce_path

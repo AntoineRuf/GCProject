@@ -1,0 +1,53 @@
+%link{rel: "stylesheet", type: "text/css", href: "/css/bootstrap.css"}
+%html
+  %body
+    %header
+      %nav.navbar.navbar-default
+        .container
+          .navbar-header
+            %button.navbar-toggle.collapsed{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", :type => "button"}
+              %span.sr-only Toggle navigation
+              %span.icon-bar
+              %span.icon-bar
+              %span.icon-bar
+            %a.navbar-brand{:href => "#"} Good Corner Project
+          .navbar-collapse.collapse
+            %ul.nav.navbar-nav
+              %li
+                %a{:href => 'annonces#index'} Annonces
+              %li.active
+                %a Users
+
+%h1 Listing users
+
+%table
+  %thead
+    %tr
+      %th Nom
+      %th Prénom
+      %th Promotion
+      %th Email
+      %th Tél
+      %th Isadmin
+      %th Password
+      %th
+      %th
+      %th
+
+  %tbody
+    - @users.each do |user|
+      %tr
+        %td= user.nom
+        %td= user.prenom
+        %td= user.promotion
+        %td= user.email
+        %td= user.tel
+        %td= user.is_admin
+        %td= user.password
+        %td= link_to 'Show', user
+        %td= link_to 'Edit', edit_user_path(user)
+        %td= link_to 'Destroy', user, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New User', new_user_path

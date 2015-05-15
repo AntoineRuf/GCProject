@@ -1,0 +1,16 @@
+%p
+  %b Title:
+  = @annonce.title
+%p
+  %b Body:
+  = @annonce.body
+%p
+  %b Price:
+  = @annonce.price
+%p
+  %b Creator:
+  = @annonce.creator_id
+
+= link_to 'Edit', edit_annonce_path(@annonce)
+\|
+= link_to 'Back', annonces_path
