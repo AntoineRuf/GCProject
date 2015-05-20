@@ -50,4 +50,7 @@
 
 %br
 
-= link_to 'New User', new_user_path
+= link_to 'New User', new_user_registration_path
+= link_to 'Deconnexion', destroy_user_session_path, :method => :DELETE
+
+= render 'shared/links'
