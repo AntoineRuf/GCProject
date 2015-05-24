@@ -1,24 +1,6 @@
-%link{rel: "stylesheet", type: "text/css", href: "/css/bootstrap.css"}
-%html
-  %body
-    %header
-      %nav.navbar.navbar-default
-        .container
-          .navbar-header
-            %button.navbar-toggle.collapsed{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", :type => "button"}
-              %span.sr-only Toggle navigation
-              %span.icon-bar
-              %span.icon-bar
-              %span.icon-bar
-            %a.navbar-brand{:href => "#"} Good Corner Project
-          .navbar-collapse.collapse
-            %ul.nav.navbar-nav
-              %li.active
-                %a Annonces
-              %li
-                %a{:href => 'users#index'} Users
+= render 'shared/navbar'
 
-%h1 Listing annonces
+%h1 Annonces récentes
 
 %table
   %thead
@@ -44,4 +26,8 @@
 
 %br
 
-= link_to 'New Annonce', new_annonce_path
+- if user_signed_in?
+  = link_to 'Poster une annonce', new_annonce_path
+  %br
+- else
+  %h5 Vous devez vous connecter pour poster une annonce.

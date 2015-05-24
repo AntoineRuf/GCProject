@@ -6,3 +6,14 @@
 	Création des différents controllers Devise.
 	Ajout des premières fonctionalités de connexion / déconnexion.
 	Création d'une branche de test sur GitHub.
+
+23/05/2015-Chrono73-
+	Transfert de la navbar dans le dossier partagé.
+	Implantation de la navbar dynamique sur toutes les pages via <%= render "shared/navbar" %>.
+	Conditions d'apparition des liens en fonction de l'état connecté / non-connecté de l'utilisateur.
+
+24/05/2015-Chrono73-
+	Déplacement des liens liés au compte dans la navbar.
+	Réglage de divers bugs liés aux chemins.
+	Création de boutons "Mon compte" et "Mes annonces" dans la navbar, pour l'instant sans fonction.
+	Implantation d'un message demandant la connection pour poster une annonce.
