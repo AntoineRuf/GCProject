@@ -1,24 +1,6 @@
-%link{rel: "stylesheet", type: "text/css", href: "/css/bootstrap.css"}
-%html
-  %body
-    %header
-      %nav.navbar.navbar-default
-        .container
-          .navbar-header
-            %button.navbar-toggle.collapsed{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", :type => "button"}
-              %span.sr-only Toggle navigation
-              %span.icon-bar
-              %span.icon-bar
-              %span.icon-bar
-            %a.navbar-brand{:href => "#"} Good Corner Project
-          .navbar-collapse.collapse
-            %ul.nav.navbar-nav
-              %li
-                %a{:href => 'annonces#index'} Annonces
-              %li.active
-                %a Users
+= render 'shared/navbar'
 
-%h1 Listing users
+%h1 Listing des utilisateurs
 
 %table
   %thead
@@ -49,5 +31,3 @@
         %td= link_to 'Destroy', user, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
 %br
-
-= link_to 'New User', new_user_path
