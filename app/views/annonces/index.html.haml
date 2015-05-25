@@ -2,27 +2,20 @@
 
 %h1 Annonces récentes
 
-%table
-  %thead
-    %tr
-      %th Title
-      %th Body
-      %th Price
-      %th Creator
-      %th
-      %th
-      %th
+- @annonces.each do |annonce|
+  .row
+    .col-sm-6.col-md-4
+      .thumbnail
+        %img{:alt => "...", :src => "wallpaper.jpg"}/
+        .caption
+          %h3 
+            %td= annonce.title
+          %td= annonce.body
+          %p
+            %a.btn.btn-primary{:href => "#", :role => "Button"} Show
+            %a.btn.btn-default{:href => "#", :role => "Button"} Edit
+            %a.btn.btn-danger{:href => "#", :role => "Button"} Delete
 
-  %tbody
-    - @annonces.each do |annonce|
-      %tr
-        %td= annonce.title
-        %td= annonce.body
-        %td= (annonce.price/100.0)
-        %td= annonce.creator_id
-        %td= link_to 'Show', annonce
-        %td= link_to 'Edit', edit_annonce_path(annonce)
-        %td= link_to 'Destroy', annonce, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
 %br
 

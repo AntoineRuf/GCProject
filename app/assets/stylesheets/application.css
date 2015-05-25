@@ -13,3 +13,65 @@
  *= require_tree .
  *= require_self
  */
+
+body
+{
+	background-image: url('wallpaper.jpg');
+	background-attachment: fixed;
+}
+
+.navbar 
+{
+background: rgba(231,56,39,1);
+background: -moz-linear-gradient(left, rgba(231,56,39,1) 0%, rgba(240,47,23,0.74) 29%, rgba(241,111,92,0.68) 36%, rgba(246,41,12,0.37) 70%, rgba(248,80,50,0.1) 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(231,56,39,1)), color-stop(29%, rgba(240,47,23,0.74)), color-stop(36%, rgba(241,111,92,0.68)), color-stop(70%, rgba(246,41,12,0.37)), color-stop(100%, rgba(248,80,50,0.1)));
+background: -webkit-linear-gradient(left, rgba(231,56,39,1) 0%, rgba(240,47,23,0.74) 29%, rgba(241,111,92,0.68) 36%, rgba(246,41,12,0.37) 70%, rgba(248,80,50,0.1) 100%);
+background: -o-linear-gradient(left, rgba(231,56,39,1) 0%, rgba(240,47,23,0.74) 29%, rgba(241,111,92,0.68) 36%, rgba(246,41,12,0.37) 70%, rgba(248,80,50,0.1) 100%);
+background: -ms-linear-gradient(left, rgba(231,56,39,1) 0%, rgba(240,47,23,0.74) 29%, rgba(241,111,92,0.68) 36%, rgba(246,41,12,0.37) 70%, rgba(248,80,50,0.1) 100%);
+background: linear-gradient(to right, rgba(231,56,39,1) 0%, rgba(240,47,23,0.74) 29%, rgba(241,111,92,0.68) 36%, rgba(246,41,12,0.37) 70%, rgba(248,80,50,0.1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e73827', endColorstr='#f85032', GradientType=1 );
+}
+
+.navbar-default .navbar-fnt{
+	color: #FFFFFF;
+}
+
+table, th, td {
+   border: 1px solid black;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th {
+    text-align: left;
+}
+
+td {
+    height: 50px;
+    vertical-align: bottom;
+}
+
+td {
+    padding: 15px;
+}
+
+table, td, th {
+    border: 1px solid green;
+}
+
+th {
+    background-color: green;
+    color: white;
+}
+
+.thumbnail{
+     border:none !important;
+     background: transparent !important;
+     box-shadow:none !important;
+}
