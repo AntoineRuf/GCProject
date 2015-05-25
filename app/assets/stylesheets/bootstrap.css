@@ -11,8 +11,7 @@ html {
       -ms-text-size-adjust: 100%;
 }
 body {
-  margin: 2px;
-  background-color: #d0e474;
+  margin: 0;
 }
 article,
 aside,
@@ -1091,7 +1090,7 @@ body {
   font-size: 14px;
   line-height: 1.42857143;
   color: #333;
-  background-color: #d0e474;
+  background-color: #fff;
 }
 input,
 button,
@@ -2288,7 +2287,7 @@ th {
   border-top: 2px solid #ddd;
 }
 .table .table {
-  background-color: #d0e474;
+  background-color: #fff;
 }
 .table-condensed > thead > tr > th,
 .table-condensed > tbody > tr > th,
@@ -5758,7 +5757,7 @@ button.close {
 }
 .modal-content {
   position: relative;
-  background-color: #d0e474;
+  background-color: #fff;
   -webkit-background-clip: padding-box;
           background-clip: padding-box;
   border: 1px solid #999;

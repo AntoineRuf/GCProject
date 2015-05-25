@@ -18,3 +18,6 @@
 	Création de boutons "Mon compte" et "Mes annonces" dans la navbar, pour l'instant sans fonction.
 	Implantation d'un message demandant la connection pour poster une annonce.
 	Ajout des permissions sur les annonces.
+
+25/05/2015-Chrono73-
+	Implémentation d'un menu déroulant pour l'utilisateur.

@@ -27,12 +27,22 @@
                   %a{:href => users_path} Utilisateurs
             %ul.nav.navbar-nav.navbar-right
               - if user_signed_in?
-                %li
-                  %a Mes annonces
-                %li
-                  %a Mon compte
-                %li
-                  = link_to 'Déconnexion', destroy_user_session_path, :method => :DELETE
+                %li.dropdown
+                  %a.dropdown-toggle{"aria-expanded" => "false", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+                    Mon compte
+                    %span.caret
+                  %ul.dropdown-menu{:role => "menu"}
+                    %li
+                      %a{:href => "#"} Mes annonces
+                    %li
+                      %a{:href => "#"} Mes informations
+                    %li.divider
+                    %li
+                      %a{:href => edit_user_registration_path} Changement de mot de passe
+                    %li
+                      = link_to 'Déconnexion', destroy_user_session_path, :method => :DELETE
+                    %li
+                      = link_to 'Supprimer mon compte', user_registration_path, data: { confirm: "Are you sure?" }, :method => :DELETE
               - else
                 %li
                   %a{:href => new_user_registration_path} Inscription
